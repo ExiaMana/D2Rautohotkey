@@ -8,12 +8,12 @@ class GUI:
         master.title("配置工具")
 
         # 创建标签、文本框和保存按钮
-        self.label1 = tk.Label(master, text="技能一:")
+        self.label1 = tk.Label(master, text="炮轰:")
         self.label1.grid(row=0, column=0)
         self.entry1 = tk.Entry(master)
         self.entry1.grid(row=0, column=1)
 
-        self.label2 = tk.Label(master, text="技能二:")
+        self.label2 = tk.Label(master, text="切换武器:")
         self.label2.grid(row=1, column=0)
         self.entry2 = tk.Entry(master)
         self.entry2.grid(row=1, column=1)
@@ -22,18 +22,18 @@ class GUI:
         self.save_button.grid(row=2, column=0)
 
         # 创建脚本一和脚本二的按钮
-        self.script1_button = tk.Button(master, text="脚本一", command=lambda: self.run_script('script1.exe'))
+        self.script1_button = tk.Button(master, text="一键换手点灯", command=lambda: self.run_script('script1.exe'))
         self.script1_button.grid(row=3, column=0)
 
-        self.script2_button = tk.Button(master, text="脚本二", command=lambda: self.run_script('script2.exe'))
+        self.script2_button = tk.Button(master, text="跑跑随心飞", command=lambda: self.run_script('script2.exe'))
         self.script2_button.grid(row=3, column=1)
 
         # 读取最新的配置文件
         try:
             with open('config.json', 'r') as f:
                 config = json.load(f)
-                self.entry1.insert(0, config['skill1'])
-                self.entry2.insert(0, config['skill2'])
+                self.entry1.insert(0, config['炮轰'])
+                self.entry2.insert(0, config['切换武器'])
         except:
             pass
 
