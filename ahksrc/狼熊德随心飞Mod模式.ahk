@@ -7,13 +7,21 @@
 
 Teleport        = f   ;传送
 SwitchWeapon    = x   ;切武器
+Metawerewolf    = 8     ;变狼
+MetaBear        = 9     ;变熊
 
+Isrunning       = False
 
 #IfWinActive,  ahk_exe D2R.exe
-$MButton::    
+$MButton::
+if Isrunning = True
+    {
+        Return
+    }   
+    Isrunning = True 
         MouseGetPos, X1, Y1       
         ; send, {b}           ; 打开物品栏, 基于带mini cube的MDK MOD，可以不要
-        send, {8}             ;狼变人
+        send, {%Metawerewolf%}             ;狼变人
         sleep, 640
 
         send, {%SwitchWeapon%}              ;切副手
@@ -45,7 +53,7 @@ $MButton::
         ; send, {b}           ; 打开物品栏
         sleep, 560
 
-        send, {8}               ;变狼
+        send, {%Metawerewolf%}               ;变狼
 
         BlockInput, MouseMove        
         MouseMove, 1807, 622,         ;移到物品栏装备刚毅或其他输出甲
@@ -61,5 +69,6 @@ $MButton::
         BlockInput, MouseMove 
         MouseMove, %X2%, %Y2%
         BlockInput, MouseMoveOff
-
+        sleep, 500
+        Isrunning       = False
         Return
