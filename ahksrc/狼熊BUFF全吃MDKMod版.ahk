@@ -30,7 +30,7 @@ Isrunning  =  True
 
         BlockInput, MouseMove
 
-        MouseMove, 1807, 672,       ;装备变形头，坐标根据自己的屏幕定。
+        MouseMove, 1807, 611,       ;装备变形头，坐标根据自己的屏幕定。
         send, {shift down}
         send, {LButton}
         send, {shift Up}
@@ -60,7 +60,7 @@ Isrunning  =  True
 
 
         BlockInput, MouseMove
-        MouseMove, 1807, 572,        ;装备狼嚎
+        MouseMove, 1807, 694,        ;装备狼嚎
         send, {shift down}
         send, {LButton}
         send, {shift Up}
@@ -70,7 +70,7 @@ Isrunning  =  True
         sleep, 500
 
 
-        MouseMove, 1807, 572,        ;装备变形
+        MouseMove, 1807, 694,        ;装备变形
         send, {shift down}
         send, {LButton}
         send, {shift Up}
@@ -96,7 +96,7 @@ Isrunning  =  True
  
 
         BlockInput, MouseMove
-        MouseMove, 1807, 672,         ;装备CB头。
+        MouseMove, 1807, 611,         ;装备CB头。
         send, {shift down}
         send, {LButton}
         send, {shift Up}
