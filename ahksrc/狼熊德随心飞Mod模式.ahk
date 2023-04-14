@@ -10,6 +10,7 @@ SwitchWeapon    = x   ;切武器
 Metawerewolf    = 8     ;变狼
 MetaBear        = 9     ;变熊
 
+
 Isrunning       = False
 
 #IfWinActive,  ahk_exe D2R.exe

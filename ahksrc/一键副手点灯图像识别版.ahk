@@ -16,7 +16,7 @@ W1 := 50
 H1 := 50
 SX2 := SX1 + W1
 SY2 := SY1 + H1
-Interval := 80
+Interval := 40
 
 Isrunning = False
 
@@ -37,7 +37,7 @@ Loop , 15
     ; CoordMode, Pixel, Screen    
     ImageSearch, FoundX, FoundY, %SX1%, %SY1%, %SX2%, %SY2%, *80 %ImagePath%
     
-    ; 如果找到匹配图像
+    ; 如果没找到匹配图像
     if ErrorLevel = 1 
     {
         ; 发送按键X
@@ -54,7 +54,7 @@ Loop , 15
 
     Else
     {
-        ; 如果未找到匹配图像，则退出循环
+        ; 如果找到匹配图像，则退出循环
         break
     }
 
