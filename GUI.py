@@ -1,11 +1,13 @@
 import tkinter as tk
 import json
 import subprocess
+import gettext
 
 class GUI:
     def __init__(self, master):
         self.master = master
-        master.title("配置工具")
+        # self.translate = gettext.translation('gui', localedir='locales',languages=['en','zh_CN'])
+        master.title("D2R鼠标宏配置工具")
 
         # 创建标签、文本框和保存按钮
         self.label1 = tk.Label(master, text="炮轰:")
